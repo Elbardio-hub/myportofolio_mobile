@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myportofolio_mobile/screens/menu.dart';
 import 'package:myportofolio_mobile/screens/project_form.dart';
+import 'package:myportofolio_mobile/screens/certification_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -59,6 +60,17 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const ProjectFormPage()),
+              );
+            },
+          ),
+                    ListTile(
+            leading: const Icon(Icons.workspace_premium_outlined),
+            title: const Text('Add Certification'),
+            // Navigasi ke halaman tambah sertifikasi
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const CertificationFormPage()),
               );
             },
           ),

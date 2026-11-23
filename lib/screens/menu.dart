@@ -13,6 +13,7 @@ class MyHomePage extends StatelessWidget {
     ItemHomepage("Lihat Proyek", Icons.folder, Colors.blueAccent),
     ItemHomepage("Tambah Proyek", Icons.add_circle, Colors.green.shade700),
     ItemHomepage("Logout", Icons.logout, Colors.redAccent),
+    ItemHomepage("Tambah Sertifikasi", Icons.workspace_premium, Colors.orange.shade700),
   ];
 
   @override
