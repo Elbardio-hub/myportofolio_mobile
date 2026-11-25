@@ -21,7 +21,7 @@ class _CertificationFormPageState extends State<CertificationFormPage> {
   // Menyimpan tanggal yang dipilih. Nullable karena awalnya belum dipilih.
   DateTime? _issueDate;
   DateTime? _expiryDate;
-  
+
   // Controller untuk menampilkan teks tanggal di dalam field.
   final _issueDateController = TextEditingController();
   final _expiryDateController = TextEditingController();
@@ -37,8 +37,18 @@ class _CertificationFormPageState extends State<CertificationFormPage> {
   // Mengubah DateTime menjadi teks, contoh: 5 Mei 2026.
   String _formatDate(DateTime date) {
     const months = [
-      'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember',
+      'Januari',
+      'Februari',
+      'Maret',
+      'April',
+      'Mei',
+      'Juni',
+      'Juli',
+      'Agustus',
+      'September',
+      'Oktober',
+      'November',
+      'Desember',
     ];
     return "${date.day} ${months[date.month - 1]} ${date.year}";
   }
@@ -75,7 +85,6 @@ class _CertificationFormPageState extends State<CertificationFormPage> {
     }
   }
 
-  
   // Menampilkan "-" untuk isian opsional yang kosong.
   String _orDash(String value) => value.trim().isEmpty ? "-" : value.trim();
 
@@ -215,7 +224,7 @@ class _CertificationFormPageState extends State<CertificationFormPage> {
                   },
                 ),
               ),
-                            // === Tanggal Terbit ===
+              // === Tanggal Terbit ===
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(

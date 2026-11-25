@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
-import 'package:myportofolio_mobile/widgets/project_card.dart';
+import 'package:myportofolio_mobile/widgets/item_card.dart';
 
 class MyHomePage extends StatelessWidget {
-   MyHomePage({super.key});
+  MyHomePage({super.key});
 
   final String npm = "2506547203";
   final String nama = "Ahyan timuardi";
   final String kelas = "PBP D";
 
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Proyek", Icons.folder, Colors.blueAccent),
-    ItemHomepage("Tambah Proyek", Icons.add_circle, Colors.green.shade700),
+    ItemHomepage("Lihat Experience", Icons.folder, Colors.blueAccent),
+    ItemHomepage("Tambah Experience", Icons.add_circle, Colors.green.shade700),
     ItemHomepage("Logout", Icons.logout, Colors.redAccent),
-    ItemHomepage("Tambah Sertifikasi", Icons.workspace_premium, Colors.orange.shade700),
+    ItemHomepage(
+      "Tambah Sertifikasi",
+      Icons.workspace_premium,
+      Colors.orange.shade700,
+    ),
   ];
 
   @override
@@ -24,13 +28,10 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'MyPortfolio',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        iconTheme: const IconThemeData(color: Colors.white)
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       drawer: const LeftDrawer(),
       // Body halaman utama dengan padding di sekelilingnya.
@@ -108,10 +109,7 @@ class InfoCard extends StatelessWidget {
         // Menyusun teks title dan content secara vertikal.
         child: Column(
           children: [
-            Text(
-              title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
+            Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8.0),
             Text(content),
           ],
